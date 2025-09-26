@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدورة الروحانية - أكاديمية عمر المصري</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- شريط التنقل العلوي -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">الدورة الروحانية</div>
+        <nav class="nav-links">
+          <a href="index.html">الرئيسية</a>
+          <a href="#" id="logout-course">تسجيل الخروج</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container course-content">
+      <h2>مرحبا بك في الدورة</h2>
+      <p>
+        يمكنك مشاهدة الفيديوهات التالية الخاصة بالدورة. يرجى الالتزام بعدم
+        مشاركة هذه الروابط مع الآخرين.
+      </p>
+      <!-- حاوية الدروس: قائمة الدروس ومشغل الفيديو -->
+      <div class="lessons-container">
+        <aside id="lessons-list" class="lessons-sidebar"></aside>
+        <div id="lesson-player" class="lessons-player">
+          <p>اختر درسًا من القائمة لبدء المشاهدة.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="course.js"></script>
+  </body>
+</html>

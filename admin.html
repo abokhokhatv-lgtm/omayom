@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>لوحة التحكم - أكاديمية عمر المصري</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- شريط التنقل العلوي بسيط للعودة إلى الصفحة الرئيسية -->
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">لوحة التحكم</div>
+        <nav class="nav-links">
+          <a href="index.html">الرئيسية</a>
+          <a href="course.html">الدورة</a>
+          <a href="#" id="logout-link">تسجيل الخروج</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container admin-panel">
+      <h2>مرحبا بك في لوحة التحكم</h2>
+      <!-- قسم إضافة مستخدم -->
+      <div class="admin-section">
+        <h3>إضافة مستخدم جديد</h3>
+        <form id="add-user-form">
+          <label for="new-username">اسم المستخدم</label>
+          <input type="text" id="new-username" required />
+          <label for="new-password">كلمة المرور</label>
+          <input type="password" id="new-password" required />
+          <label for="new-expiry">تاريخ الانتهاء</label>
+          <input type="date" id="new-expiry" required />
+          <button type="submit" class="btn-primary">إضافة المستخدم</button>
+        </form>
+        <p id="add-user-msg" class="success-message"></p>
+      </div>
+
+      <!-- قسم قائمة المستخدمين -->
+      <div class="admin-section">
+        <h3>المستخدمون الحاليون</h3>
+        <table id="users-table">
+          <thead>
+            <tr>
+              <th>اسم المستخدم</th>
+              <th>تاريخ الانتهاء</th>
+              <th>كلمة المرور</th>
+              <th>إجراءات</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!-- قسم تغيير بيانات الأدمن -->
+      <div class="admin-section">
+        <h3>تغيير بيانات الأدمن</h3>
+        <form id="admin-change-form">
+          <label for="admin-new-username">اسم المستخدم الجديد</label>
+          <input type="text" id="admin-new-username" required />
+          <label for="admin-new-password">كلمة المرور الجديدة</label>
+          <input type="password" id="admin-new-password" required />
+          <button type="submit" class="btn-primary">تحديث البيانات</button>
+        </form>
+        <p id="admin-update-msg" class="success-message"></p>
+      </div>
+
+      <!-- قسم إضافة مقالة جديدة -->
+      <div class="admin-section">
+        <h3>إضافة مقالة جديدة</h3>
+        <form id="add-post-form">
+          <label for="post-title">عنوان المقالة</label>
+          <input type="text" id="post-title" required />
+          <label for="post-content">نص المقالة</label>
+          <textarea id="post-content" rows="4" required></textarea>
+          <button type="submit" class="btn-primary">نشر المقالة</button>
+        </form>
+        <p id="add-post-msg" class="success-message"></p>
+      </div>
+
+      <!-- قسم المقالات الحالية -->
+      <div class="admin-section">
+        <h3>المقالات الحالية</h3>
+        <table id="posts-table">
+          <thead>
+            <tr>
+              <th>العنوان</th>
+              <th>التاريخ</th>
+              <th>إجراءات</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!-- قسم إضافة كتاب جديد -->
+      <div class="admin-section">
+        <h3>إضافة كتاب جديد</h3>
+        <form id="add-book-form">
+          <label for="book-title">عنوان الكتاب</label>
+          <input type="text" id="book-title" required />
+          <label for="book-description">وصف الكتاب</label>
+          <textarea id="book-description" rows="3"></textarea>
+          <label for="book-link">رابط الكتاب (PDF)</label>
+          <input type="url" id="book-link" required />
+          <button type="submit" class="btn-primary">إضافة الكتاب</button>
+        </form>
+        <p id="add-book-msg" class="success-message"></p>
+      </div>
+
+      <!-- قسم الكتب الحالية -->
+      <div class="admin-section">
+        <h3>الكتب الحالية</h3>
+        <table id="books-table">
+          <thead>
+            <tr>
+              <th>العنوان</th>
+              <th>الوصف</th>
+              <th>الرابط</th>
+              <th>إجراءات</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!-- قسم إضافة مخطوطة جديدة -->
+      <div class="admin-section">
+        <h3>إضافة مخطوطة جديدة</h3>
+        <form id="add-manuscript-form">
+          <label for="manuscript-title">عنوان المخطوطة</label>
+          <input type="text" id="manuscript-title" required />
+          <label for="manuscript-description">وصف المخطوطة</label>
+          <textarea id="manuscript-description" rows="3"></textarea>
+          <label for="manuscript-link">رابط المخطوطة (Google Drive)</label>
+          <input type="url" id="manuscript-link" required />
+          <button type="submit" class="btn-primary">إضافة المخطوطة</button>
+        </form>
+        <p id="add-manuscript-msg" class="success-message"></p>
+      </div>
+      <div class="admin-section">
+        <h3>المخطوطات الحالية</h3>
+        <table id="manuscripts-table">
+          <thead>
+            <tr>
+              <th>العنوان</th>
+              <th>الوصف</th>
+              <th>الرابط</th>
+              <th>إجراءات</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <!-- قسم إدارة الدروس -->
+      <div class="admin-section">
+        <h3>إضافة درس جديد</h3>
+        <form id="add-lesson-form">
+          <label for="lesson-title">عنوان الدرس</label>
+          <input type="text" id="lesson-title" required />
+          <label for="lesson-url">رابط الفيديو (YouTube أو Vimeo)</label>
+          <input type="url" id="lesson-url" required />
+          <label><input type="checkbox" id="lesson-free" /> مجاني (عرض تجريبي)</label>
+          <button type="submit" class="btn-primary">إضافة الدرس</button>
+        </form>
+        <p id="add-lesson-msg" class="success-message"></p>
+      </div>
+      <div class="admin-section">
+        <h3>الدروس الحالية</h3>
+        <table id="lessons-table">
+          <thead>
+            <tr>
+              <th>العنوان</th>
+              <th>مجاني؟</th>
+              <th>الرابط</th>
+              <th>إجراءات</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+
+    <script src="admin.js"></script>
+  </body>
+</html>

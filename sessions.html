@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>حجز جلسة علاجية | عمر علي</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="container nav-container">
+        <div class="logo">عمر علي</div>
+        <nav class="nav-links">
+          <a href="index.html#home">الرئيسية</a>
+          <a href="index.html#courses">الكورسات</a>
+          <a href="blog.html">المدونة</a>
+          <a href="library.html">المكتبة</a>
+          <a href="sessions.html" class="active">الجلسات</a>
+          <a href="index.html#contact">التواصل</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero small-hero">
+      <div class="container">
+        <h1>حجز جلسة علاجية</h1>
+        <p>
+          نقدم جلسات علاجية فردية تساعدك على التحرر من الضغوط وتحقيق السلام
+          الداخلي باستخدام تقنيات روحانية متقدمة. يمكنك حجز جلسة معنا بسهولة
+          عبر استمارة الحجز أو التواصل المباشر.
+        </p>
+      </div>
+    </section>
+
+    <section class="booking-section">
+      <div class="container">
+        <h2>طلب جلسة علاجية</h2>
+        <p>
+          يرجى تعبئة النموذج التالي لطلب جلسة. سيتم التواصل معك لتأكيد الموعد
+          وتحديد طريقة الدفع. جميع البيانات سرية وتحترم خصوصيتك.
+        </p>
+        <form id="booking-form" class="booking-form">
+          <div class="form-group">
+            <label for="name">الاسم الكامل</label>
+            <input type="text" id="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">البريد الإلكتروني</label>
+            <input type="email" id="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">رقم الهاتف</label>
+            <input type="tel" id="phone" required />
+          </div>
+          <div class="form-group">
+            <label for="date">التاريخ المفضل للجلسة</label>
+            <input type="date" id="date" required />
+          </div>
+          <div class="form-group">
+            <label for="time">الوقت المفضل</label>
+            <input type="time" id="time" required />
+          </div>
+          <div class="form-group">
+            <label for="notes">ملاحظات إضافية (اختياري)</label>
+            <textarea id="notes" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-primary">إرسال الطلب</button>
+          <p id="booking-success" class="success-message" style="display: none">
+            تم إرسال طلبك بنجاح! سنقوم بالتواصل معك قريبًا لتأكيد الموعد.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>© 2025 عمر علي. جميع الحقوق محفوظة.</p>
+      </div>
+    </footer>
+
+    <script>
+      // simple form submission handler
+      document.getElementById("booking-form").addEventListener("submit", function (e) {
+        e.preventDefault();
+        // display success message
+        document.getElementById("booking-success").style.display = "block";
+        // reset the form
+        this.reset();
+      });
+    </script>
+  </body>
+</html>
