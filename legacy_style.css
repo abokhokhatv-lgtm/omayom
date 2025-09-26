@@ -1,0 +1,550 @@
+/*
+ * ملف أنماط CSS لموقع أكاديمية دكتور عمر المصري.
+ */
+body {
+  margin: 0;
+  font-family: 'Noto Sans Arabic', sans-serif;
+  /* خلفية محايدة مع لون فاتح منسجم مع أسلوب الزجاجيات */
+  background-color: #f4f6f9;
+  color: #1f2235;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+
+/* شريط التنقل */
+.navbar {
+  background-color: #0d47a1; /* أزرق داكن */
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffca28; /* لون ذهبي */
+}
+
+/*
+ * عناصر عامة بزجاجية (glassmorphism)
+ * تضيف شفافية وخلفية ضبابية لتقريب تصميم iOS 26.
+ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* قسم البداية */
+.hero {
+  background-image: linear-gradient(rgba(13, 71, 161, 0.7), rgba(13, 71, 161, 0.7)), url('https://images.pexels.com/photos/5700595/pexels-photo-5700595.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+/* أزرار */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #ffca28; /* ذهبي */
+}
+
+.btn-primary:hover {
+  background-color: #ffc107;
+}
+
+.btn-secondary {
+  background-color: #0d47a1;
+}
+
+.btn-secondary:hover {
+  background-color: #063970;
+}
+
+/* قسم الكورسات */
+.courses-section {
+  background-color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.courses-section h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.courses-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* بطاقات الكورسات تستعمل تأثير الزجاج */
+.course-card {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1.5rem;
+  width: 300px;
+  text-align: start;
+}
+
+.course-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.course-card .price {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #0d47a1;
+}
+
+.course-card .btn-primary {
+  width: 100%;
+  text-align: center;
+}
+
+/* قسم الفيديوهات */
+.videos-section {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.videos-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.videos-section p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* قسم الكتب */
+.books-section {
+  background-color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.books-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.books-section p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* بطاقات الكتب تستعمل تأثير الزجاج */
+.book-card {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1rem;
+  width: 250px;
+  text-align: start;
+}
+
+.book-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-card p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.book-card .btn-secondary {
+  width: 100%;
+  text-align: center;
+}
+
+/* صفحة تسجيل الدخول */
+.login-container {
+  max-width: 400px;
+  margin: 4rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: right;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.error-message {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.success-message {
+  color: green;
+  margin-top: 0.5rem;
+}
+
+/* الصفحة: المدونة */
+.blog-page {
+  padding: 3rem 0;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.post-card {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+}
+
+.post-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.post-content {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* الصفحة: المكتبة */
+.library-page {
+  padding: 3rem 0;
+}
+
+/* تحسين عناصر textarea في النماذج */
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+/* لوحة التحكم */
+.admin-panel {
+  margin-top: 2rem;
+}
+
+/* أقسام لوحة التحكم بزجاجية */
+.admin-section {
+  background: rgba(255, 255, 255, 0.55);
+  border-radius: 12px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.admin-section h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.admin-section form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.admin-section form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.admin-section table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.admin-section table th,
+.admin-section table td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.admin-section table th {
+  background-color: #f1f1f1;
+}
+
+.admin-section table input[type='text'],
+.admin-section table input[type='date'],
+.admin-section table input[type='password'] {
+  width: 100%;
+  padding: 0.3rem;
+  box-sizing: border-box;
+}
+
+.admin-section table button {
+  padding: 0.4rem 0.8rem;
+  margin: 0.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #0d47a1;
+  color: #fff;
+}
+
+.admin-section table button:hover {
+  background-color: #063970;
+}
+
+/* محتوى الدورة */
+.course-content {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.course-content h2 {
+  margin-bottom: 1rem;
+}
+
+.course-content p {
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* قسم التواصل */
+.contact-section {
+  background-color: #f8f9fa;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-section p {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: start;
+}
+
+.contact-info li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+/* التذييل */
+.footer {
+  background-color: #0d47a1;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* إدارة الدروس في صفحة الدورة */
+.lessons-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.lessons-sidebar {
+  flex: 1 1 220px;
+  max-width: 280px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  overflow-y: auto;
+  max-height: 500px;
+}
+
+.lessons-player {
+  flex: 3 1 600px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  min-height: 300px;
+}
+
+.lesson-item {
+  display: block;
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  text-align: right;
+  transition: background-color 0.2s ease;
+}
+
+.lesson-item:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.lesson-item.active {
+  background: rgba(255, 255, 255, 0.8);
+  font-weight: bold;
+}
+
+.lesson-item.locked {
+  background: rgba(0, 0, 0, 0.1);
+  color: #555;
+  cursor: not-allowed;
+}
+
+.lessons-player .ratio {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  margin-top: 1rem;
+}
+
+.lessons-player .ratio iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
